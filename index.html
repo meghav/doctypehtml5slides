@@ -44,59 +44,337 @@
         <div class="slides">
             <div class="slide current">
                 <section class="middle">
-                    <h1>Group Title</h1>
+                    <h1>Quick Pointers</h1>
+                    <h1>~ HTML5 and CSS3 ~</h1>
                 </section>
+            <div class="logo">
+                <span class="brkt">&lt;</span><span class="bang">!</span><span itemprop="summary">DocType HTML<sup>5</sup></span>
+                <span class="domain">.in</span><span class="brkt">&gt;</span>
+            </div>
                 <span class="counter">1</span>
             </div>
             <div class="slide future">
                 <header>
-                    <h1>Slide Title</h1>
+                    <h1>ON HTML</h1>
                 </header>
                 <section>
                     <ul>
-                        <li>Client Side Storage (Web SQL Database, App Cache, Web Storage)</li>
-                        <li>Communication (Web Sockets, Worker Workers)</li>
-                        <li>Desktop experience (Notifications, Drag and Drop API)</li>
-                        <li>Geolocation</li>                        
+
+                        <li>What are Semantic Tags?</li>
+                        <li>Semantic markup vs Presentation markup (aka HTML vs CSS)</li>
+                        <li>The Document Object Model</li>
+                        <li>Deprecated tags and attributes, and why they are deprecated</li>
+                        <li>The difference between id, class and style</li>
+                        <li>XHTML: what went wrong, and why HTML5 is more relaxed</li>
+                        <li>Why you should memorise tags and hand code HTML rather than use a WYSIWYG editor -- especially if you're building a web app delivered via a template language</li>    
                     </ul>
                 </section>
                 <span class="counter">2</span>
             </div>
+
             <div class="slide far-future">
                 <header>
-                    <h1>New Selectors</h1>
+                    <h2>What are Semantic Tags?</h2>
                 </header>
                 <section>
-                    <h2>Finding elements by class (DOM API)</h2>
-                    <pre>
-                        var el = document.getElementById('section1');
-                        el.focus();
-
-                        var els = document.getElementsByTagName('div');
-                        els[0].focus();
-
-                        var els = document.<b>getElementsByClassName</b>('section');
-                        els[0].focus();
-                    </pre>
-                    <h2>Finding elements by CSS syntax (Selectors API)</h2>
-                    <pre>
-                        var els = document.querySelectorAll("ul li:nth-child(odd)");
-                        var els = document.querySelectorAll("table.test > tr > td");
-                    </pre>
+                    <ul>
+                        <li>HTML has included semantic markup or semantic tags since its inception. Authors may, among other things, "start with a title; add headings and paragraphs; add emphasis to text; add images; add links to other pages; use various kinds of lists"</li>
+                        <li>Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in web pages rather than merely to define its presentation (look).</li>
+                        <li>Semantics in HTML5 is not just about making existing markup shorter (although it does a fair amount of that). It also defines new semantic elements.</li>
+                        <li>Semantic HTML is processed by regular web browsers as well as by other user agents. Marking emphasis, citations and loanwords in different ways makes it easier for web agents such as search engines and other software to ascertain the significance of the text.</li>
+                        <li>Semantic HTML also improves the accessibility of web documents especially by screen readers or audio browsers to ascertain the structure of a document and eliminate irrelevant information.</li>
+                    </ul>
                 </section>
                 <span class="counter">3</span>
             </div>
             <div class="slide far-future">
                 <header>
-                    <h1>Slide 4</h1>
+                    <h2>Semantic markup vs Presentation markup</h2>
                 </header>
+                <section>
+                    <ul>
+                        <li> At one time, HTML also included presentation markup such as  &#60;font&#62;,  &#60;i&#62; and  &#60;center&#62; tags. There are also the semantically neutral span and div tags.</li>
+                        <li>Since the late 1990s when Cascading Style Sheets were beginning to work in most browsers, web authors have been encouraged to avoid the use of presentational HTML markup in view of the separation of presentation and content.</li>
+                        <li>The intent of separating Presentation markup from Semantic or Content Markup is likely to have been driven by <a href="http://en.wikipedia.org/wiki/Separation_of_presentation_and_content"> the need of machine readability</a> as against mere human readability. </li>
+                        <li>Also with Presentation markup being well adapted, the paradigm shift is likely in <a href="http://www.jwz.org/doc/markup.html">favour of "the Designer".</a></li>
+                        <li>Presentational markup tags are deprecated in current HTML and XHTML recommendations and are illegal in HTML 5.</li>
+                    </ul>
+                </section>
                 <span class="counter">4</span>
             </div>
             <div class="slide far-future">
                 <header>
-                    <h1>Slide 5</h1>
+                    <h2>The Document Object Model</h2>
                 </header>
+                <section>
+                    <ul>
+                        <li>The Document Object Model (DOM) is an application programming interface (API) for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. </li>
+                        <li>As a W3C specification, one important objective for the Document Object Model is to provide a standard programming interface that can be used in a wide variety of environments and applications. The DOM is designed to be used with any programming language.</li>
+                        <li> In addition to specifying markup, HTML5 specifies scripting application programming interfaces (APIs). Existing document object model (DOM) interfaces are extended and de facto features documented. There are also new APIs, such as:
+                        <pre>The canvas element for immediate mode 2D drawing; Timed media playback; Off line storage database (off line web applications); See Web Storage; Document editing; Drag-and-drop; Cross-document messaging; Browser history management; MIME type and protocol handler registration; Microdata;Geolocation; Web SQL Database, a local SQL Database; The Indexed Database API, a indexed hierarchical key-value store (formerly WebSimpleDB)</pre>
+Not all of the above technologies are included in the W3C HTML5 specification, though they are in the <a href="http://en.wikipedia.org/wiki/WHATWG">WHATWG HTML specification</a>.</li>
+
+                    </ul>
+                </section>
                 <span class="counter">5</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Deprecated tags and attributes</h2>
+                </header>
+                <section>
+                    <ul>
+                        <li>There are a number of tags and attributes which have been deprecated in HTML 5 or earlier versions which may still work in some browsers. For backward compatibility with existing documents, the HTML specifications may even require that these deprecated elements and attributes continue to be supported by HTML 5 compliant browsers and document processors. However, when creating web documents conforming to the HTML 5 specifications, authors should avoid these deprecated HTML tags.</li>
+                        <li>A <a href="http://www.tutorialspoint.com/html5/html5_deprecated_tags.htm">list of deprecated Tags and Attributes</a> are available.</li>
+                        <li>A list of all the <a href="http://www.w3.org/TR/html5-diff/#new-elements">new tags</a> and <a href="http://www.w3.org/TR/html5-diff/#new-attributes">new attributes</a> are also available with the W3C specification</li>
+                    
+                        <h2>Why are they deprecated?</h2>
+                        <li>Most of these tags and attributes are presentational elements and are better dealt with using CSS.</li>
+                    </ul>
+                </section>
+                <span class="counter">6</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>The difference between id, class and style</h2>
+                </header>
+                <section>
+                    <ul>
+                        <li>The id attribute provides a document-wide unique identifier so that style sheets can alter its presentational properties, and scripts may alter, animate or delete its contents or presentation. Appended to the URL of the page, it provides a globally unique identifier for the element, typically a sub-section of the page.</li>
+                        <li>The class attribute provides a way of classifying similar elements. This can be used for semantic or presentation purposes. For example, an HTML document might semantically use the designation class="notation" to indicate that all elements with this class value are subordinate to the main text of the document. Representatively, such elements might be gathered together and presented as footnotes on a page instead of appearing in the place where they occur in the HTML source.</li>
+                        <li>An author may use the style attribute to assign presentational properties to a particular element. It is considered better practice to use an element’s id or class attributes to select the element from within a stylesheet, though sometimes this can be too cumbersome for a simple, specific, or ad hoc styling. </li>
+                        <pre>&#60;abbr id="anId" class="jargon" style="color:blue;" title="Hypertext Markup Language"&#62; HTML &#60;/abbr&#62;</pre>
+</li>
+                    </ul>
+                </section>
+                <span class="counter">7</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>XHTML went wrong; HTML5 is more relaxed</h2>
+                </header>
+                <section>
+                    <ul>
+                        <li>XHTML 1.0 (from 1998) was an interim specification that simply reformulated HTML in XML without adding any new elements or attributes. This specification later became known as “XHTML 1.0.” It defined a new MIME type for XHTML documents, application/xhtml+xml.</li>
+                        <li>When the W3C reformulated HTML as an XML vocabulary, they mandated that all documents served with the new application/xhtml+xml MIME type would be subject to draconian error handling. If there was even a single error in your XHTML page, web browsers would have no choice but to stop processing and display an error message to the end user.</li>
+                        <li>With an estimated error rate of 99% on existing pages, the ever-present possibility of displaying errors to the end user, and the dearth of new features in XHTML 1.0 and 1.1 to justify the cost, <a href="http://diveintohtml5.org/past.html#xhtml">web authors basically ignored application/xhtml+xml.</a></li>
+                        <li>HTML5 with its backward compatibility and a <a href="http://web-design.blogs.webucator.com/2010/10/06/xhtml-html5-and-freedom-from-choice/?utm_source=rss&utm_medium=rss&utm_campaign=xhtml-html5-and-freedom-from-choice">flexible approach vs a strict XHTML approach</a> is much more relaxed.</li>
+                    </ul>
+                </section>
+                <span class="counter">8</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Hand code HTML than use a WYSIWYG editor!</h2>
+                </header>
+                <section>
+                    <ul>
+                        <li>A lot of HTML code churned out by the WYSIWYG editors is superfluous which makes the web pages bulky in file size and not optimized for search engines.</li>
+                        <li>Several editors have been accused of letting users employ "browser specific HTML tags". These tags are also generally not compliant with the HTML standards set by the W3C.</li>
+                        <li>Most editors still use HTML tables to layout a page. This is an older technique replaced by Cascading Style Sheets.
+HTML written by the WYSIWYG editors is usually not correct or validated.</li>
+                        <li>HTML was meant for document structure not document design. However, WYSIWYG HTML editors work on exactly the opposite line of thought, without isolating presentation markup from content markup very well.</li>
+                        <li><a href="http://www.webdevelopersnotes.com/design/wysiwyg_html_editors_advantages_disadvantages.php3">WYSIWYG HTML editors</a> might help beginners create web pages quickly but an experienced web developer can code equally fast guided by templating engines</li>
+                    </ul>
+                </section>
+                <span class="counter">9</span>
+            </div>
+
+            <div class="slide far-future">
+                <header>
+                    <h1>ON CSS</h1>
+                </header>
+                <section>
+                    <ul>
+                        <li>The CSS box model: margin, border and padding</li>
+                        <li>CSS selectors</li>
+                        <li>Cascading in CSS: how the browser decides which rules to apply</li>
+                        <li>Common CSS rules</li>
+                        <li>Using a grid framework to manage layout</li>
+                        <li>Managing complexity with CSS compilers like SASS (too advanced?)</li>  
+                    </ul>
+                </section>
+                <span class="counter">10</span>
+            </div>
+                        <div class="slide far-future">
+                <header>
+                    <h2>The CSS box model:</h2>
+                </header>
+                <section>
+                    <ul>
+                        <li>Good links to understand the CSS box model are <a href="http://www.w3.org/TR/css3-box/">at W3C</a>, <a href="http://www.brainjar.com/css/positioning/default.asp">brainjar</a> and <a href="http://redmelon.net/tstme/box_model/"> on redmelon here.</a></li>
+                        <li>That's the box! <img src="http://www.w3.org/TR/css3-box/box.png" alt="css box"/></li>
+                        <li><a href="http://www.w3.org/TR/css3-box/">More on boxes:</a> block, inline, inline-block, float, zero-height, layers, tables and positioning</li>
+                        
+                    </ul>
+                </section>
+                <span class="counter">11</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>CSS selectors</h2>
+                </header>
+                <section>
+                    <ul>
+                    <li>A Selector represents a structure. This structure can be used as a condition (e.g. in a CSS rule) that determines which elements a selector matches in the document tree, or as a flat description of the HTML or XML fragment corresponding to that structure.</li>
+                    <li>Selectors may range from simple element names to rich contextual representations.</li>
+                    <pre>   SELECTOR { PROPERTY: VALUE }
+                        "Property" is the CSS element you wish to manipulate and "VALUE" represents the value of the specified property
+                        The selector name creates a direct relationship with the HTML tag you want to edit. If you wanted to change the way a paragraph tag behaved, the CSS code would look like:
+                            p { PROPERTY: VALUE }
+                    </pre>
+                    <li>W3C tutorial on selectors can be visited <a href="http://www.w3.org/TR/css3-selectors/#selectors">here.</a></li>
+                    <li><a href="http://tools.css3.info/selectors-test">The CSS selector test</a> is likely to be a good tool to check out!</li>
+                    </ul>
+                </section>
+                <span class="counter">12</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Cascading CSS</h2>
+                </header>
+                <section>
+                    <ul>
+                    <li>Style sheets may have three different origins: author, user, and user agent.</li>
+                    <li>Author: The author specifies style sheets for a source document according to the conventions of the document language.</li>
+                    <li>User: The user may be able to specify style information for a particular document.</li>
+                    <li>User agent: Conforming user agents must apply a default style sheet (or behave as if they did). A user agent's default style sheet should present the elements of the document language in ways that satisfy general presentation expectations for the document language</li>
+                    <li>Style sheets from these three origins will overlap in scope, and they interact according to the cascade that assigns a weight to each style rule. When several rules apply, the one with the greatest weight takes precedence.</li>
+                    <li>By default, rules in author style sheets have more weight than rules in user style sheets. Precedence is reversed, however, for "!important" rules. <a  href="http://www.w3.org/TR/CSS2/cascade.html#cascade"> More here...</a></li>
+                </section>
+                <span class="counter">13</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Common CSS rules</h2>
+                </header>
+                <section>
+
+                <ul>
+                <li>Comments are denoted within style sheets with the same conventions that are used in C programming.</li>
+                <pre> A sample CSS1 comment would be in the format: /* COMMENTS CANNOT BE NESTED */</pre>
+                <li>Any HTML element is a possible CSS1 selector. The selector is simply the element that is linked to a particular style. </li>
+                <pre>For example, the selector in P { text-indent: 3em } is P.</pre>
+
+                <li>Class selectors: A simple selector can have different classes, thus allowing the same element to have different styles.</li> 
+                <pre>For example, an author may wish to display code in a different color depending on its language:
+                code.html { color: #191970 }
+                code.css  { color: #4b0082 }</pre>
+                <li>ID selectors are individually assigned for the purpose of defining on a per-element basis. This selector type should only be used sparingly due to its inherent limitations. </li>
+                <pre> For example, an ID selector could be assigned as such:
+                #svp94O { text-indent: 3em }</pre>
+                </ul>
+                </section>
+                <span class="counter">14</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Common CSS rules... contd.</h2>
+                </header>
+                <section>
+                <ul>
+                <li>Contextual selectors are merely strings of two or more simple selectors separated by white space. These selectors can be assigned normal properties and, due to the rules of cascading order, they will take precedence over simple selectors. 
+                <pre>For example, the contextual selector in P EM { background: yellow }
+is P EM. This rule says that emphasised text within a paragraph should have a yellow background; emphasised text in a heading would be unaffected.</pre>
+                <li>A property:value pair is assigned to a selector in order to manipulate its style. Examples of properties include color, margin, and font.</li>
+                <li>In order to decrease repetitious statements within style sheets, grouping of selectors and declarations is allowed. </li>
+                <pre>For example, all of the headings in a document could be given identical declarations through a grouping:
+                    H1, H2, H3, H4, H5, H6 {
+                      color: red;
+                      font-family: sans-serif }</pre>
+                <li>Virtually all selectors which are nested within selectors will inherit the property values assigned to the outer selector unless otherwise modified. For example, a color defined for the BODY will also be applied to text in a paragraph.</li>
+                
+                </ul>
+                </section>
+                <span class="counter">15</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>CSS Grid Framework</h2>
+                </header>
+                <section>
+                    <ul><li>Layout grids have been used in print publishing long before the Web. They’re an invisible foundation used to achieve visual cohesion in magazine and newspaper page design and layout. They essentially amount to a lattice that divides horizontal and vertical space in consistent units where text, headlines, images, and advertising can be placed. The same concept has been adapted for web page design for much the same reason, using CSS (Cascading Style Sheets) code to position HTML elements. In fact, many editorial sites run by large print media publishers do apply grids to achieve a look on their websites that’s similar to their print content.</li>
+                    <li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/which-css-grid-framework-should-you-use-for-web-design/">This article</a> discusses which CSS grid framework suits the needs of web design.</li>
+                    <li><a href="http://www.noupe.com/css/5-popular-css-frameworks-tutorials-tools-for-getting-started.html">This article</a> discusses 5 popular CSS Frameworks with tutorial links.</li>
+                    </ul>
+                </section>
+                <span class="counter">16</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>CSS compilers</h2>
+                </header>
+                <section>
+                    <ul><a href="http://blog.davidziegler.net/post/92203003/css-compilers-rock">Likely good reasons</a> to use CSS compilers:
+                    <li>Variables - Good programmers don’t like to hardcode. In many cases you can avoid this in CSS by using good inheritance, but sometimes it’s unavoidable. With variables, changing your color scheme means updating one variable instead of 13 attributes.
+                    </li>
+                    <li>Math - This goes hand in hand with variables. Say your left column is 100px, your right column is 500px, and your wrapper div is 600px. Well, maybe you decide to change it to 960px. Wouldn’t it be awesome if the width of your columns adjusted automatically? The answer is yes.
+                    </li>
+                    <li>Nested Styles - This is probably the most important. CSS is flat, which means complex sites end up with CSS that is a pain to go through. A developer is lot likely to find code to represent CSS more beautiful.
+                    </li>
+                    <a href="http://sass-lang.com/">SASS</a> and <a href="http://sandbox.pocoo.org/clevercss/">CleverCSS</a> seem to be popular CSS compilers.
+                    </ul>
+                </section>
+                <span class="counter">17</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h1>ON JS</h1>
+                </header>
+                <section>
+                    <ul>
+                        <li>History of Javascript: why it has rough edges and can't be amended; coping mechanisms</li>
+                        <li>The document object model</li>
+                        <li>Why it is generally a good idea to use a framework</li>
+                    </ul>
+                </section>
+                <span class="counter">18</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>History of Javascript</h2>
+                </header>
+                <section>
+                    <ul><li>JavaScript was originally developed by Brendan Eich of Netscape under the name Mocha, which was later renamed to LiveScript, and finally (roughly coincided with Netscape adding support for Java technology ) to JavaScript.</li>
+                        <li>JavaScript very quickly gained widespread success as a client-side scripting language for web pages. As a consequence, Microsoft developed a compatible dialect of the language, naming it JScript to avoid trademark issues. Microsoft, however, notes dozens of ways in which JScript is not ECMA-compliant.</li>
+                        <li>In November, 1996 Netscape announced that it had submitted JavaScript to Ecma International for consideration as an industry standard, and subsequent work resulted in the standardized version named ECMAScript.</li>
+                        <li>JavaScript has become one of the most popular programming languages on the web. Initially, however, many professional programmers denigrated the language because its target audience was web authors and other such "amateurs", among other reasons. The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers, even on server-side JavaScript platforms.</li>
+                </section>
+                <span class="counter">19</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>The Javascript DOM Reference</h2>
+                </header>
+                <section>
+                    <ul>
+                    <li> JavaScript allows us to manipulate any element on an HTML page in real time. We can hide or completely remove any element, add elements, copy them, change properties such as color, width, height, etc. and with some creative JavaScript, we can even implement drag/drop functionality, animation, or just about anything else you can think of.</li>
+                    <li>Here are a set of tutorials that can help you get started on how to manipulate the DOM with Java script:</li>
+                    <ul>
+                    <li><a href="http://www.htmlgoodies.com/primers/jsp/article.php/3594621/Javascript-Basics-Part-6.htm">HTMLGoodies</a></li>
+                    <li><a href="http://www.quirksmode.org/dom/intro.html">Quirkmode</a></li>
+                    <li><a href="http://www.w3schools.com/jsref/default.asp">W3Schools</a></li>
+                    <li><a href="http://www.javascriptkit.com/domref">JavaScriptKit</a></li>
+                    </ul>
+                    </ul>
+                </section>
+                <span class="counter">20</span>
+            </div>
+            <div class="slide far-future">
+                <header>
+                    <h2>Why use a framework?</h2>
+                </header>
+                <section>
+                    <ul>
+                    <li>Don't Reinvent The Wheel: Why write code that's already been written (better)? </li>
+                    <li>Do More With Less Code: Most JavaScript frameworks provide function "chaining." Chaining allows you to do more with less code. Less code means less maintenance time, less download time, and less coding time.</li>
+                    <li>Save Time: Let the experts do the tough part, you take their work and make what you'd like of it.</li>
+                    <li> Frameworks are evolving rapidly: The creators of these JavaScript frameworks have a contest when it comes to JavaScript speed and put a lot of effort into making sure their frameworks are fast. </li>
+                    <li>Avoid Cryptic JavaScript Base Code: Why use JavaScript's default functions when you can use a framework's English-named functions? <a href="http://davidwalsh.name/6-reasons-to-use-javascript-libraries-frameworks"> More here...</a></li>
+                    <li><a href="http://www.livexp.net/technology/ajax/framework/top-10-javascript-frameworks.html">A link to the top 10 frameworks</li>
+                    </ul>
+                </section>
+                <span class="counter">21</span>
             </div>
         </div> <!-- end of .slides -->
     </div> <!-- end of .presentation -->
