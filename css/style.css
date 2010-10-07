@@ -306,14 +306,14 @@ section ul li {
     margin-left: 1500px;
 }
 
-.slide .logo{
+.logo{
+    font-family: "Museo Sans", "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", "Bitstream Vera Sans", sans-serif;
     display: block;
     position: absolute;
     top: 40px;
     right: 20px;
     font-size: 400%; 
     text-transform: lowercase;
-    font-family: "Museo Sans", "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", "Bitstream Vera Sans", sans-serif;
 }
 
 .logo .sup {
